@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+header {}
+
+nav {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    padding: 24px 0;
+}
+
+h3.logo {
+    flex-basis: 60%;
+}
+
+ul.nav {
+    white-space: nowrap;
+    flex-basis: 30%;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+
+/* HERO PAGE */
+#hero .container-hero {
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    width: 100vw;
+}
+
+#hero .img-bg {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#hero .txt-page {
+    text-align: start;
+}
+
+#hero .txt-page h1 {
+    font-size: 45px;
+    padding-left: 70px;
+}
+
+#hero .txt-page p.phar {
+    font-size: 24px;
+    padding-left: 70px;
+}
+
+#hero .first-page {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+}
+
+#hero .card-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+#hero .card-hero:hover,
+.transform:hover {
+
+    opacity: 1;
+}
+
+#hero .card-hero {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+
+    /* Smooth transition */
+}
+
+#hero .transform {
+    font-size: 35px;
+    margin: 0px 35px;
+    padding: 25px;
+    margin-top: 20px;
+    transition: opacity 0.3s ease;
+}
+
+#hero h2.title-card {
+    padding-top: 20px;
+}
+
+#hero p {
+    text-align: center;
+    display: inline;
+    font-size: 12px;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(-5px);
+    transition: all 1s ease;
+}
+
+
+
+/* EXPERIENCE PAGE */
+section#experience {
+    background-color: #cccc;
+    height: 60vh;
+}
+
+.feature_card {
+    display: flex;
+    place-content: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.feature_card h1.exp-heading {
+    font-size: 50px;
+}
+
+.feature_card ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    padding: 40px 0px;
+    gap: 10%;
+
+}
+
+.feature_card ul>li {
+    font-size: 30px;
+}
+
+.feature_card ul li h1>span {
+    font-size: 100px;
+    font-weight: 100;
+}
+
+.feature_card ul li>span {
+    font-size: 20px;
+}
+
+
+/* Services Section */
+#services h1.services-heading {
+    font-size: 40px;
+    text-align: center;
+}
+
+#services .card-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+#services .card {
+    border-radius: 10px;
+    border: 1.5px solid gray;
+    overflow: hidden;
+    /* Keeps content (like images) inside the card */
+    width: 100%;
+    max-width: 400px;
+    /* Optional: controls card size */
+    text-align: center;
+}
+
+#services .card .img-bgwrap {
+    height: 250px;
+    /* or whatever fits your design */
+    width: 100%;
+}
+
+#services .card .img-bgwrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keeps image fully inside container without distortion */
+    display: block;
+    /* Removes unwanted bottom spacing */
+}
+
+#services .card .txt-card {
+    padding: 20px 10px;
+}
+
+#services .card .txt-card h1 {
+    font-weight: 800;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+#services .card .txt-card h2 {
+    font-weight: 100;
+    padding-bottom: 10px;
+}
+
+#services .card .txt-card p {
+    font-size: 12px;
+    padding: 0px 50px;
+    padding-bottom: 10px;
+}
+
+/* ABOUT US SECTION */
+#about .container {
+    height: 300px;
+    margin: 0px 80px;
+}
+
+#about .container .btn {}
+
+#about .container .btn button {
+    border: 0;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    border: 1.5px solid gray;
+    margin-bottom: 30px;
+}
+
+#about .container h1 {
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+#about .container p {
+    font-size: 20px;
+}
+
+/* Contact Section */
+/* General Styles */
+body {
+    background-color: #f8f8f8;
+}
+
+#contact {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 5rem 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.underline {
+    width: 4rem;
+    height: 0.25rem;
+    background-color: #121720;
+    margin: 0 auto 1.5rem;
+}
+
+.section-header p {
+    max-width: 640px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Contact Form */
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.form-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit button {
+    background-color: #121720;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: none;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Contact Info */
+.contact-grid {
+
+    margin: 0;
+}
+
+.underline {
+    margin: 0 auto;
+}
+
+.section-header {
+
+    margin: 10px 0;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.info-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: #121720;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.email-icon::before {
+    content: "📧";
+    font-size: 1.25rem;
+}
+
+.phone-icon::before {
+    content: "📞";
+    font-size: 1.25rem;
+}
+
+.info-item h4 {
+    margin: 0 0 0.25rem 0;
+}
+
+.info-desc {
+    color: #555;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.download-cv {
+    margin-top: 2rem;
+}
+
+.download-cv button {
+    background-color: #121720;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: none;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+/* FOOTER SECTION */
+.simple-footer {
+    margin-top: 40px;
+    background-color: #121720;
+    color: #d9d9d9;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    /* 14px */
+    border-top: 1px solid #2a2a2a;
+    /* Optional: subtle top border */
+}
