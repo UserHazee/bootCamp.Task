@@ -439,7 +439,16 @@ body {
     cursor: none;
     transition: background-color 0.3s ease;
 }
-
+header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 10;    
+}
+nav{
+    top: 0;
+    
+}
 
 
 
@@ -454,4 +463,72 @@ body {
     /* 14px */
     border-top: 1px solid #2a2a2a;
     /* Optional: subtle top border */
+}
+.btn{
+    border-radius: 30px;
+    padding: 3px 10px;
+    border: 1px solid gray;
+}
+/* DARK AND LIGHT SWITCH */
+
+/* 🌞 Default Light Mode */
+body {
+  background: #ffffff;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+/* Navbar */
+body.dark header nav {
+  background: #1e1e1e;
+}
+
+body.dark .nav li span {
+  color: #f0f0f0;
+}
+
+body.dark #darkModeToggle {
+  background: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+/* Hero section */
+body.dark #hero {
+  background: #181818;
+}
+
+body.dark .card-hero {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* Services cards */
+body.dark .card {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark .txt-card h1,
+body.dark .txt-card h2,
+body.dark .txt-card p {
+  color: #ddd;
+}
+
+/* Contact form */
+body.dark .info-box,
+body.dark .form-box label{
+    color: black;
+}
+/* Footer */
+body.dark footer {
+  color: #ccc;
 }

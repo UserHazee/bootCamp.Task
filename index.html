@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-dM0j3Px7DJ...your_hash..." crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
     <header>
         <nav>
             <h3 class="logo">
-                Logo
+                Mr. R
             </h3>
             <ul class="nav">
                 <li><span>Home</span></li>
                 <li><span>About</span></li>
                 <li><span>Services</span></li>
                 <li><span>Contact Us</span></li>
+                <button id="darkModeToggle" class="btn"><i class="fa-solid fa-moon"></i>&nbsp; <span>Dark Mode</span></button>
+
             </ul>
         </nav>
     </header>
@@ -129,13 +133,13 @@
                 </div>
             </div>
         </section>
-        <section id="about">
-            <div class="container">
+        <section id="about" style=" align-items: start; justify-content: start;">
+            <div class="container" style="padding-top: 20px;">
 
-                <div class="btn">
-                    <button>Mr. Rivera Photo</button>
+                <div class="btn1" style=" justify-content: center; display: flex; align-items: center;"><img
+                        src="auto-repair-blog-mechanic.webp" alt="" style="border-radius: 150px;">
                 </div>
-                <h1>
+                <h1 style="padding: 20px 0 0 0 ;">
                     Meet Mr. Rivera – Your Trusted Vehicle Technician
 
 
@@ -191,14 +195,14 @@
                                 <div class="icon email-icon"></div>
                                 <div>
                                     <h4>Email</h4>
-                                    <p>mrdavepmariano@gmail.com</p>
+                                    <p>mrrivera@gmail.com</p>
                                 </div>
                             </div>
                             <div class="info-item">
                                 <div class="icon phone-icon"></div>
                                 <div>
                                     <h4>Phone Number</h4>
-                                    <p>+639563656500</p>
+                                    <p>+63964436332</p>
                                 </div>
                             </div>
                             <p class="info-desc">
@@ -260,17 +264,36 @@
             });
         });
 
+const toggleBtn = document.getElementById("darkModeToggle");
+const toggleText = toggleBtn.querySelector("span");
+const toggleIcon = toggleBtn.querySelector("i");
+
+// Load saved preference
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  toggleText.textContent = "Light Mode";
+  toggleIcon.classList.remove("fa-moon");
+  toggleIcon.classList.add("fa-sun");
+}
+
+// Toggle and save preference
+toggleBtn.addEventListener('click', function () {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    
+   toggleText.textContent = "Light Mode";
+    toggleIcon.classList.remove("fa-moon");
+    toggleIcon.classList.add("fa-sun");
+  } else {
+     toggleText.textContent = "Dark Mode";
+    toggleIcon.classList.remove("fa-sun");
+    toggleIcon.classList.add("fa-moon");
+    localStorage.setItem("theme", "light");
+  }
+});
 
 
-        // const exp = document.querySelector(".card-wrapper");
-        // const transform = document.querySelector(".transform");
-        // exp.addEventListener('mouseenter', () => {
-        //     exp.classList.add('fade-in');
-        // });
-
-        // exp.addEventListener('mouseleave', () => {
-        //     exp.classList.remove('fade-in');
-        // });
     </script>
 </body>
 
